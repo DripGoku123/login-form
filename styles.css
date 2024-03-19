@@ -1,0 +1,162 @@
+body {
+    z-index:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: center;
+    background: linear-gradient(to bottom, #000000, #6b0c6b);
+    overflow: hidden;
+}
+h4{
+    color:rgb(255, 255, 255);
+    padding: 5px;
+}
+.centered-text {
+    text-align: center;
+}
+
+.border{
+    color:#520052;
+    border: 3px solid #380f6b;
+    padding: 10px;
+    background-color: hsl(284, 51%, 65%);
+}
+.border3{
+    border:1px solid #220622;
+    padding: 20px;
+    text-align:center;
+    background-color: #020213;
+    content: '';
+    z-index: 2;
+}
+.border2{
+    z-index: 1;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #020102;
+    overflow: hidden;
+}
+.border2::before{
+    position: absolute;
+    width: 210%;
+    height: 210%;
+    content: '';
+    background-image: conic-gradient(transparent, transparent, transparent, transparent, transparent, transparent,transparent,#1d001d, #310031, #4d024d, #6b015d, #910189,#db00db, #dadada);
+    animation: rotate_border 8s linear infinite;
+
+}
+.border2::after{
+    position: absolute;
+    width: 210%;
+    height: 210%;
+    content: '';
+    background-image: conic-gradient(transparent, transparent, transparent, transparent, transparent, transparent,transparent,#1d001d, #310031, #4d024d, #6b015d, #910189,#db00db, #dadada);
+    animation: rotate_border 8s linear infinite;
+    animation-delay: -4s;
+}
+.rainbow-text {
+    font-size: 4rem;
+    background: linear-gradient(45deg, #ff0000, #ff6600, #ffcc00, #33cc33, #0099ff, #9900cc);
+    background-size: 400%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: rainbow 10s linear infinite;
+    box-shadow: 0 0 20px rgba(148, 7, 153, 1);
+
+}
+.custom-button {
+    margin: center auto;
+    padding: 30px;
+    text-align: center;    
+    background: linear-gradient(10deg, #3b033b, #77276c, #3b033b);
+    background-size: 200%;
+    color: #000000; 
+    min-width:250px;
+    max-width: 200px; 
+    border: 5px solid #361028; 
+    cursor: pointer;
+    animation: rainbow 8s linear infinite
+
+}
+.custom-button:hover {
+    background: linear-gradient(10deg,#000000, #330033, #000000);
+    background-size: 200%;
+    animation: rainbow 9s linear infinite
+
+}
+
+.login-form {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    padding: 30px;
+    border: 5px solid #200c38;
+    border-radius: 50%;
+    text-align: center;
+    background-color:#22034b
+}
+
+.form-group {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.move-left {
+    animation: moveLeft 1s ease-in-out forwards; 
+}
+  
+.ball {
+    top: 0px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    animation: fall 9s linear infinite, glow 1s alternate infinite;
+    box-shadow: 0 0 10px rgba(255, 230, 0, 0.7); 
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-100px);
+    }
+    100% {
+      transform: translateY(100vh);
+    }
+  }
+  
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 10px rgba(252, 227, 117, 0.7); 
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(252, 227, 117, 0.9); 
+    }
+  }
+  
+@keyframes rotate_border{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0 0;
+        
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
